@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | ZIVORA</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff0f6, #ffd6e7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            width: 400px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(194, 24, 91, 0.18);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #c2185b;
+            margin-bottom: 8px;
+        }
+
+        .admin-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 28px;
+        }
+
+        .input-box {
+            text-align: left;
+            margin-bottom: 18px;
+        }
+
+        .input-box label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .input-box input:focus {
+            border-color: #c2185b;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #c2185b;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .login-btn:hover {
+            background: #a3154d;
+        }
+
+        .error {
+            color: red;
+            margin-top: 15px;
+            display: none;
+        }
+
+        .back {
+            display: block;
+            margin-top: 20px;
+            color: #c2185b;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <div class="logo">💗 ZIVORA</div>
+
+        <h2 class="admin-title">Admin Login</h2>
+
+        <p class="subtitle">Login to manage your store</p>
+
+        <form onsubmit="adminLogin(event)">
+
+            <div class="input-box">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter username">
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter password">
+            </div>
+
+            <button type="submit" class="login-btn">
+                Login 🔐
+            </button>
+
+            <p class="error" id="error">
+                Invalid username or password!
+            </p>
+
+        </form>
+
+        <a href="../index.html" class="back">
+            ← Back to Website
+        </a>
+
+    </div>
+
+    <script>
+        function adminLogin(event) {
+
+            event.preventDefault();
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin123") {
+
+                window.location.href = "dashboard.html";
+
+            } else {
+
+                document.getElementById("error").style.display = "block";
+
+            }
+        }
+    </script>
+
+</body>
+</html>

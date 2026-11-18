@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Products | ZIVORA</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f6fa;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 250px;
+            height: 100vh;
+            background: #c2185b;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 13px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 17px;
+        }
+
+        .sidebar a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .main {
+            margin-left: 250px;
+            padding: 40px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #c2185b;
+        }
+
+        .add-btn {
+            background: #c2185b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+        }
+
+        .table-box {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #fff0f6;
+            color: #c2185b;
+        }
+
+        .product-img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .edit {
+            background: #2196f3;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .delete {
+            background: #e53935;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .status {
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+        @media(max-width:900px) {
+
+            .sidebar {
+                width: 200px;
+            }
+
+            .main {
+                margin-left: 200px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <h2>ZIVORA Admin</h2>
+
+        <a href="dashboard.html">📊 Dashboard</a>
+
+        <a href="products.html">📦 Products</a>
+
+        <a href="add-product.html">➕ Add Product</a>
+
+        <a href="orders.html">🛒 Orders</a>
+
+        <a href="customers.html">👥 Customers</a>
+
+        <a href="reports.html">📈 Reports</a>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="main">
+
+        <div class="header">
+
+            <h1>Manage Products 📦</h1>
+
+            <a href="add-product.html" class="add-btn">
+                + Add Product
+            </a>
+
+        </div>
+
+
+        <div class="table-box">
+
+            <table>
+
+                <tr>
+                    <th>Image</th>
+                    <th>Product</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            class="product-img"
+                            src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=200&q=80">
+                    </td>
+
+                    <td>Summer Dress</td>
+
+                    <td>Fashion</td>
+
+                    <td>₹1,499</td>
+
+                    <td>25</td>
+
+                    <td class="status">Available</td>
+
+                    <td>
+                        <a href="#" class="edit">Edit</a>
+                        <a href="#" class="delete">Delete</a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            class="product-img"
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=200&q=80">
+                    </td>
+
+                    <td>Running Shoes</td>
+
+                    <td>Shoes</td>
+
+                    <td>₹2,299</td>
+
+                    <td>18</td>
+
+                    <td class="status">Available</td>
+
+                    <td>
+                        <a href="#" class="edit">Edit</a>
+                        <a href="#" class="delete">Delete</a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            class="product-img"
+                            src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=200&q=80">
+                    </td>
+
+                    <td>Beauty Kit</td>
+
+                    <td>Beauty</td>
+
+                    <td>₹899</td>
+
+                    <td>40</td>
+
+                    <td class="status">Available</td>
+
+                    <td>
+                        <a href="#" class="edit">Edit</a>
+                        <a href="#" class="delete">Delete</a>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        <img
+                            class="product-img"
+                            src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?auto=format&fit=crop&w=200&q=80">
+                    </td>
+
+                    <td>Casual Outfit</td>
+
+                    <td>Fashion</td>
+
+                    <td>₹1,799</td>
+
+                    <td>12</td>
+
+                    <td class="status">Available</td>
+
+                    <td>
+                        <a href="#" class="edit">Edit</a>
+                        <a href="#" class="delete">Delete</a>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

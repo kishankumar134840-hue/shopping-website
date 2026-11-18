@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ZIVORA - Wishlist</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff5f9;
+            color: #333;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            height: 80px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #c2185b;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #c2185b;
+        }
+
+        .icons {
+            display: flex;
+            gap: 20px;
+            font-size: 25px;
+        }
+
+        .icons a {
+            text-decoration: none;
+        }
+
+        /* TITLE */
+
+        .title {
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .title h1 {
+            color: #c2185b;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #777;
+            font-size: 17px;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            width: 86%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            padding-bottom: 60px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 18px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 8px;
+        }
+
+        .category {
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #c2185b;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .cart-btn {
+            display: block;
+            text-align: center;
+            background: #c2185b;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        .cart-btn:hover {
+            background: #9c1248;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #222;
+            color: white;
+            padding: 35px;
+            text-align: center;
+        }
+
+        footer h2 {
+            color: #ff5c9d;
+            margin-bottom: 10px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            ZIVORA
+        </div>
+
+        <div class="nav-links">
+       <a href="../index">Home</a>      
+            <a href="shop.html">Shop</a>
+            <a href="fashion.html">Fashion</a>
+            <a href="shoes.html">Shoes</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="cart.html">Cart</a>
+            <a href="wishlist.html">Wishlist</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <div class="icons">
+            <a href="wishlist.html">♡</a>
+            <a href="cart.html">🛒</a>
+        </div>
+
+    </div>
+
+
+    <!-- TITLE -->
+
+    <div class="title">
+
+        <h1>My Wishlist ❤️</h1>
+
+        <p>Your favourite products in one place</p>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+
+    <div class="products">
+
+        <!-- PRODUCT 1 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80">
+
+            <div class="card-content">
+
+                <h3>Elegant Summer Dress</h3>
+
+                <p class="category">Fashion</p>
+
+                <p class="price">₹1,499</p>
+
+                <a href="cart.html" class="cart-btn">
+                    Add to Cart 🛒
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 2 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80">
+
+            <div class="card-content">
+
+                <h3>Classic Running Shoes</h3>
+
+                <p class="category">Shoes</p>
+
+                <p class="price">₹2,299</p>
+
+                <a href="cart.html" class="cart-btn">
+                    Add to Cart 🛒
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80">
+
+            <div class="card-content">
+
+                <h3>Beauty Essentials Kit</h3>
+
+                <p class="category">Beauty</p>
+
+                <p class="price">₹899</p>
+
+                <a href="cart.html" class="cart-btn">
+                    Add to Cart 🛒
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="card">
+
+            <img src="https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?auto=format&fit=crop&w=600&q=80">
+
+            <div class="card-content">
+
+                <h3>Trendy Casual Outfit</h3>
+
+                <p class="category">Fashion</p>
+
+                <p class="price">₹1,799</p>
+
+                <a href="cart.html" class="cart-btn">
+                    Add to Cart 🛒
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>ZIVORA</h2>
+
+        <p>Style. Shop. Smile. ✨</p>
+
+        <br>
+
+        <p>© 2026 ZIVORA. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+
+</html>
